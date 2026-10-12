@@ -1,5 +1,6 @@
-from app.repositories.storage.models.data import Data as DataModel
 from app.domain.data import Data
+from app.repositories.storage.models.data import Data as DataModel
+
 
 def map_to_domain(data: DataModel) -> Data:
     return Data(

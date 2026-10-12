@@ -7,6 +7,7 @@ from urllib.parse import urlsplit
 from fastapi import HTTPException, status
 from pydantic import BaseModel, Field, IPvAnyAddress, field_validator
 
+
 class HTTPMethod(StrEnum):
     GET = "GET"
     POST = "POST"

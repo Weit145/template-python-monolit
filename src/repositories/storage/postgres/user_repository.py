@@ -8,6 +8,7 @@ class SQLAlchemyUserRepository:
     async def create_user(self, user: User, session: AsyncSession) -> User:
         model = map_to_model(user)
         session.add(model)
-        await session.commit()
-        await session.refresh(model)
         return map_to_domain(model)
+
+    async def commit(self, session: AsyncSession) ->None:
+        await session.commit()

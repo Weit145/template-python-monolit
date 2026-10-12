@@ -1,9 +1,6 @@
+from app.domain.err import InternalError, InvalidDataError
 from fastapi import HTTPException, status
 
-from app.domain.err import (
-    InvalidDataError,
-    InternalError
-)
 
 def map_error_to_http_status_code(error: Exception) -> None:
     if isinstance(error, InvalidDataError):

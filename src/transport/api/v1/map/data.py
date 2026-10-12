@@ -1,5 +1,6 @@
-from app.transport.api.v1.schemas.data import CreateData, OutData, Log
 from app.domain.data import Data
+from app.transport.api.v1.schemas.data import CreateData, Log, OutData
+
 
 def map_to_domain(data: CreateData) -> Data:
     return Data(
